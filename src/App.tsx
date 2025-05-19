@@ -12,7 +12,8 @@ const defaultCenter = {
   lng: 0
 };
 
-const GOOGLE_MAPS_API_KEY = 'AIzaSyBxsqali9FaxxMBtnFk57YUySsurJ7p3mg';
+const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY || '';
+console.log('API Key:', GOOGLE_MAPS_API_KEY);
 
 function App() {
   const [leftMap, setLeftMap] = useState<google.maps.Map | null>(null);
@@ -67,7 +68,12 @@ function App() {
     rotateControl: true,
     fullscreenControl: false,
     streetViewControl: false,
-    mapTypeControl: false,
+    mapTypeControl: true,
+    mapTypeControlOptions: {
+      style: 2, // HORIZONTAL_BAR
+      position: 1, // TOP_RIGHT
+      mapTypeIds: ['roadmap', 'satellite']
+    },
     gestureHandling: 'greedy',
     zoomControl: true,
     scaleControl: true,
@@ -78,7 +84,7 @@ function App() {
   return (
     <LoadScript 
       googleMapsApiKey={GOOGLE_MAPS_API_KEY}
-      libraries={['places']}
+      libraries={['places', 'geometry', 'drawing']}
     >
       <div className="App">
         <div className="controls">

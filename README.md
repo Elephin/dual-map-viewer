@@ -1,39 +1,56 @@
-# Map One Scale
+# Dual Map Viewer
 
-A web application that allows you to compare two Google Maps side by side with synchronized zoom levels.
+A React application that displays two synchronized Google Maps side by side, allowing users to compare different locations or views simultaneously.
 
 ## Features
 
-- Two Google Maps displayed side by side
-- Synchronized zoom levels between maps
-- Option to choose which map controls the zoom level
-- Responsive design that works on all screen sizes
+- Two synchronized Google Maps
+- Independent search functionality for each map
+- Synchronized zoom controls
+- Map type controls (roadmap/satellite)
+- Responsive design
 
-## Setup
+## Getting Started
 
-1. Clone this repository
+### Prerequisites
+
+- Node.js (v14 or higher)
+- npm or yarn
+- Google Maps API key
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone https://github.com/Elephin/dual-map-viewer.git
+cd dual-map-viewer
+```
+
 2. Install dependencies:
-   ```bash
-   npm install
-   ```
-3. Get a Google Maps API key from the [Google Cloud Console](https://console.cloud.google.com/)
-4. Replace `YOUR_GOOGLE_MAPS_API_KEY` in `src/App.tsx` with your actual API key
-5. Start the development server:
-   ```bash
-   npm start
-   ```
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Create a `.env` file in the root directory and add your Google Maps API key:
+```
+REACT_APP_GOOGLE_MAPS_API_KEY=your_api_key_here
+```
+
+4. Start the development server:
+```bash
+npm start
+# or
+yarn start
+```
 
 ## Usage
 
-1. The application will open with two maps side by side
-2. Use the buttons at the top to choose which map controls the zoom level:
-   - "Left Map Controls Right": Changes to the left map's zoom will affect the right map
-   - "Right Map Controls Left": Changes to the right map's zoom will affect the left map
-3. Navigate and zoom on either map as you normally would with Google Maps
+- Use the search boxes to find locations on each map
+- Toggle between "Left Map Controls Right" and "Right Map Controls Left" to change which map controls the zoom synchronization
+- Use the map type controls to switch between roadmap and satellite views
 
-## Technologies Used
+## License
 
-- React
-- TypeScript
-- Google Maps JavaScript API
-- @react-google-maps/api 
+This project is licensed under the MIT License - see the LICENSE file for details. 

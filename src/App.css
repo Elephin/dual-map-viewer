@@ -1,26 +1,28 @@
 .App {
-  width: 100vw;
+  text-align: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
 .controls {
-  padding: 1rem;
+  padding: 10px;
   background-color: #f5f5f5;
   border-bottom: 1px solid #ddd;
   display: flex;
-  gap: 1rem;
+  gap: 10px;
+  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .controls button {
-  padding: 0.5rem 1rem;
+  padding: 8px 16px;
   border: 1px solid #ccc;
   border-radius: 4px;
   background-color: white;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
 }
 
 .controls button:hover {
@@ -33,44 +35,85 @@
   border-color: #0056b3;
 }
 
+.grid-controls {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid-controls label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.grid-controls input[type="range"] {
+  width: 150px;
+}
+
+.grid-controls select {
+  padding: 4px 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  cursor: pointer;
+}
+
 .maps-container {
   flex: 1;
   display: flex;
-  overflow: hidden;
+  gap: 20px;
+  padding: 20px;
+  background-color: #f0f0f0;
 }
 
 .map-section {
   flex: 1;
   display: flex;
   flex-direction: column;
-  height: 100%;
-}
-
-.map-section:first-child {
-  border-right: 1px solid #ddd;
+  gap: 10px;
 }
 
 .search-box {
-  padding: 1rem;
-  background-color: #f5f5f5;
-  border-bottom: 1px solid #ddd;
+  width: 100%;
+  padding: 0 10px;
 }
 
 .search-input {
   width: 100%;
-  padding: 0.5rem;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
-  font-size: 1rem;
-}
-
-.search-input:focus {
-  outline: none;
-  border-color: #007bff;
-  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+  font-size: 14px;
 }
 
 .map-wrapper {
   flex: 1;
   position: relative;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.grid-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.center-lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  z-index: 2;
 } 

@@ -33,4 +33,8 @@ jobs:
         with:
           folder: build
           branch: gh-pages
-          token: ${{ secrets.GH_PAT }} 
+          token: ${{ secrets.GH_PAT }}
+          clean: true
+          clean-exclude: |
+            CNAME
+            .nojekyll 

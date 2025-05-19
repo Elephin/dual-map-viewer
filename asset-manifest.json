@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/dual-map-viewer/static/css/main.1300d7c4.css",
+    "main.js": "/dual-map-viewer/static/js/main.9fdffd87.js",
+    "index.html": "/dual-map-viewer/index.html",
+    "main.1300d7c4.css.map": "/dual-map-viewer/static/css/main.1300d7c4.css.map",
+    "main.9fdffd87.js.map": "/dual-map-viewer/static/js/main.9fdffd87.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1300d7c4.css",
+    "static/js/main.9fdffd87.js"
+  ]
+}

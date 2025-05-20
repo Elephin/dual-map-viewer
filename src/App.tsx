@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { GoogleMap, LoadScript, Autocomplete } from '@react-google-maps/api';
 import './App.css';
 
